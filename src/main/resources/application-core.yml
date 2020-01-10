@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://211.218.202.186:3366/pb_server?serverTimezone=UTC&characterEncoding=UTF-8
+    username: pbadmin
+    password: vpdlwlqlfejCms2014
+  mvc.view:
+    prefix: /WEB-INF/views/
+    suffix: .jsp
+
+javamelody:
+  advisor-auto-proxy-creator-enabled: false
+
+mybatis:
+  type-aliases-package: com.clbee.pbcms.vo
+  mapper-locations: classpath:com.clbee.pbcms.mapper
+  configuration:
+    cache-enabled: true
+    lazy-loading-enabled: false
+    aggressive-lazy-loading: true
+    multiple-result-sets-enabled: true
+    use-column-label: true
+    use-generated-keys: false
+    auto-mapping-behavior: partial
+    default-executor-type: reuse
+    default-statement-timeout: 60000
+    call-setters-on-nulls: true
+

@@ -1,0 +1,6 @@
+spring.profiles.active: prod
+spring.profiles.include: core
+
+logging.level.com.clbee.pbcms: debug
+logging.file: ./log/prod
+server.tomcat.basedir: ./log/prod

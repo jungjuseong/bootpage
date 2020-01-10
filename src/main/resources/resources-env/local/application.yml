@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: local
+    include: core
+
+logging.level.com.clbee.pbcms: debug
+logging.file: ./log/local
+server.tomcat.basedir: ./log/local

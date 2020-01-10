@@ -1,0 +1,202 @@
+2020:01:10 18:57:52.500 INFO  --- [main] com.clbee.pbcms.PbcmsApplication : Starting PbcmsApplication on IRON with PID 43232 (D:\spring-works\bootpage\target\classes started by User in D:\spring-works\bootpage) 
+2020:01:10 18:57:52.503 INFO  --- [main] com.clbee.pbcms.PbcmsApplication : The following profiles are active: local,core 
+2020:01:10 18:57:53.447 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:01:10 18:57:53.453 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:01:10 18:57:53.454 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:01:10 18:57:53.454 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.29] 
+2020:01:10 18:57:53.980 INFO  --- [main] o.apache.jasper.servlet.TldScanner : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+2020:01:10 18:57:53.985 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:01:10 18:57:53.986 INFO  --- [main] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1432 ms 
+2020:01:10 18:57:54.117 INFO  --- [main] org.hibernate.Version : HHH000412: Hibernate Core {5.4.10.Final} 
+2020:01:10 18:57:55.438 INFO  --- [main] o.h.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.1.0.Final} 
+2020:01:10 18:57:55.498 WARN  --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator : HHH000342: Could not obtain connection to query metadata : null 
+2020:01:10 18:57:55.503 INFO  --- [main] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect 
+2020:01:10 18:57:56.063 INFO  --- [main] o.hibernate.tuple.PojoInstantiator : HHH000182: No default (no-argument) constructor for class: com.clbee.pbcms.vo.AppVO (class must be instantiated by Interceptor) 
+2020:01:10 18:57:56.345 WARN  --- [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2020:01:10 18:57:56.499 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/css/**'], [] 
+2020:01:10 18:57:56.500 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/js/**'], [] 
+2020:01:10 18:57:56.500 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/images/**'], [] 
+2020:01:10 18:57:56.500 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/font/**'], [] 
+2020:01:10 18:57:56.500 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/resources/**'], [] 
+2020:01:10 18:57:56.500 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/_upload/_temp/images/**'], [] 
+2020:01:10 18:57:56.522 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b4829aa, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f581211, org.springframework.security.web.header.HeaderWriterFilter@4b7ab7ab, org.springframework.security.web.csrf.CsrfFilter@5a7a6d34, org.springframework.security.web.authentication.logout.LogoutFilter@4b360972, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@208e5b23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@92e2c93, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24fef542, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@794d28a3, org.springframework.security.web.session.SessionManagementFilter@39acd1f1, org.springframework.security.web.access.ExceptionTranslationFilter@4a4ff5ed, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1fbd5e0] 
+2020:01:10 18:57:56.760 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:01:10 18:57:56.782 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:01:10 18:57:56.785 INFO  --- [main] com.clbee.pbcms.PbcmsApplication : Started PbcmsApplication in 4.637 seconds (JVM running for 7.43) 
+2020:01:10 18:58:33.249 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:01:10 18:58:33.249 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:01:10 18:58:33.256 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 7 ms 
+2020:01:10 18:58:33.421 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : ko 
+2020:01:10 18:58:33.421 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID = 77887bfa-d948-46b3-8322-a96490be3349 
+2020:01:10 18:58:33.421 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID to String = 2b153e60-c2fb-4dd5-b854-8dd02b0fdb78 
+2020:01:10 18:58:33.421 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID to String to SubString= 04755e9d45c8450eab32f2bb3ca92f35 
+2020:01:10 18:58:33.421 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : my Addres is = 0:0:0:0:0:0:0:1 
+2020:01:10 18:58:33.422 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : userIpAQddress = 0:0:0:0:0:0:0:1 
+2020:01:10 18:58:33.429 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : reaPath is = D:\spring-works\bootpage\src\main\webapp\WEB-INF\web.xml 
+2020:01:10 18:58:33.429 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : bit ���� c = 17 
+2020:01:10 18:58:34.059 WARN  --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound : No mapping for GET /css/common.css 
+2020:01:10 18:58:34.067 WARN  --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound : No mapping for GET /css/contents.css 
+2020:01:10 18:58:34.068 WARN  --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound : No mapping for GET /css/jquery-ui-1.10.3.css 
+2020:01:10 18:58:34.070 WARN  --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound : No mapping for GET /js/jquery-1.10.2.min.js 
+2020:01:10 18:58:34.071 WARN  --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound : No mapping for GET /js/custom-form-elements.min.js 
+2020:01:10 18:58:34.071 WARN  --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound : No mapping for GET /js/jquery-ui-1.10.3.min.js 
+2020:01:10 18:58:34.140 WARN  --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound : No mapping for GET /js/placeholders.min.js 
+2020:01:10 18:58:34.140 WARN  --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound : No mapping for GET /js/jquery.bpopup.min.js 
+2020:01:10 18:58:34.141 WARN  --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound : No mapping for GET /js/global_func.js 
+2020:01:10 18:58:34.142 WARN  --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound : No mapping for GET /images/logo_login.png 
+2020:01:10 18:58:34.142 WARN  --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound : No mapping for GET /js/jquery-ui-1.10.3.min.js 
+2020:01:10 18:58:34.152 WARN  --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound : No mapping for GET /js/custom-form-elements.min.js 
+2020:01:10 18:58:34.159 WARN  --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound : No mapping for GET /js/placeholders.min.js 
+2020:01:10 18:58:34.165 WARN  --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound : No mapping for GET /js/global_func.js 
+2020:01:10 18:58:34.172 WARN  --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound : No mapping for GET /js/jquery.bpopup.min.js 
+2020:01:10 19:14:31.227 INFO  --- [main] com.clbee.pbcms.PbcmsApplication : Starting PbcmsApplication on IRON with PID 41584 (D:\spring-works\bootpage\target\classes started by User in D:\spring-works\bootpage) 
+2020:01:10 19:14:31.231 INFO  --- [main] com.clbee.pbcms.PbcmsApplication : The following profiles are active: local,core 
+2020:01:10 19:14:32.262 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:01:10 19:14:32.268 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:01:10 19:14:32.269 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:01:10 19:14:32.269 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.29] 
+2020:01:10 19:14:32.823 INFO  --- [main] o.apache.jasper.servlet.TldScanner : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+2020:01:10 19:14:32.829 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:01:10 19:14:32.830 INFO  --- [main] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1540 ms 
+2020:01:10 19:14:32.967 INFO  --- [main] org.hibernate.Version : HHH000412: Hibernate Core {5.4.10.Final} 
+2020:01:10 19:14:34.271 INFO  --- [main] o.h.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.1.0.Final} 
+2020:01:10 19:14:34.338 WARN  --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator : HHH000342: Could not obtain connection to query metadata : null 
+2020:01:10 19:14:34.343 INFO  --- [main] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect 
+2020:01:10 19:14:34.953 INFO  --- [main] o.hibernate.tuple.PojoInstantiator : HHH000182: No default (no-argument) constructor for class: com.clbee.pbcms.vo.AppVO (class must be instantiated by Interceptor) 
+2020:01:10 19:14:35.258 WARN  --- [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2020:01:10 19:14:35.421 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/css/**'], [] 
+2020:01:10 19:14:35.421 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/js/**'], [] 
+2020:01:10 19:14:35.421 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/images/**'], [] 
+2020:01:10 19:14:35.422 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/font/**'], [] 
+2020:01:10 19:14:35.422 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/resources/**'], [] 
+2020:01:10 19:14:35.422 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/_upload/_temp/images/**'], [] 
+2020:01:10 19:14:35.446 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@208e5b23, org.springframework.security.web.context.SecurityContextPersistenceFilter@39acd1f1, org.springframework.security.web.header.HeaderWriterFilter@4a4ff5ed, org.springframework.security.web.csrf.CsrfFilter@445058e8, org.springframework.security.web.authentication.logout.LogoutFilter@49e0b123, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@33a71d23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f581211, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28f90752, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2bcb1414, org.springframework.security.web.session.SessionManagementFilter@4b7ab7ab, org.springframework.security.web.access.ExceptionTranslationFilter@7ac685ef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@39514976] 
+2020:01:10 19:14:35.716 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:01:10 19:14:35.742 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:01:10 19:14:35.744 INFO  --- [main] com.clbee.pbcms.PbcmsApplication : Started PbcmsApplication in 4.895 seconds (JVM running for 7.755) 
+2020:01:10 19:14:41.523 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:01:10 19:14:41.524 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:01:10 19:14:41.530 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 6 ms 
+2020:01:10 19:14:41.712 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : ko 
+2020:01:10 19:14:41.712 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID = 06f1c1dc-8b06-4de3-a775-fb9398ab27d4 
+2020:01:10 19:14:41.712 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID to String = dc79fe35-59c7-4d58-ba84-301b57fc3f73 
+2020:01:10 19:14:41.713 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID to String to SubString= d69799f2eb82486e9079a09f29023bde 
+2020:01:10 19:14:41.713 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : my Addres is = 0:0:0:0:0:0:0:1 
+2020:01:10 19:14:41.713 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : userIpAQddress = 0:0:0:0:0:0:0:1 
+2020:01:10 19:14:41.713 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : bit ���� c = 17 
+2020:01:10 19:14:42.314 WARN  --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound : No mapping for GET /css/common.css 
+2020:01:10 19:14:42.323 WARN  --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound : No mapping for GET /css/jquery-ui-1.10.3.css 
+2020:01:10 19:14:42.323 WARN  --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound : No mapping for GET /js/jquery-1.10.2.min.js 
+2020:01:10 19:14:42.323 WARN  --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound : No mapping for GET /css/contents.css 
+2020:01:10 19:14:42.324 WARN  --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound : No mapping for GET /js/custom-form-elements.min.js 
+2020:01:10 19:14:42.324 WARN  --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound : No mapping for GET /js/jquery-ui-1.10.3.min.js 
+2020:01:10 19:14:42.394 WARN  --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound : No mapping for GET /js/global_func.js 
+2020:01:10 19:14:42.394 WARN  --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound : No mapping for GET /js/jquery.bpopup.min.js 
+2020:01:10 19:14:42.394 WARN  --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound : No mapping for GET /js/placeholders.min.js 
+2020:01:10 19:14:42.396 WARN  --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound : No mapping for GET /js/jquery-ui-1.10.3.min.js 
+2020:01:10 19:14:42.396 WARN  --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound : No mapping for GET /images/logo_login.png 
+2020:01:10 19:14:42.410 WARN  --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound : No mapping for GET /js/custom-form-elements.min.js 
+2020:01:10 19:14:42.417 WARN  --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound : No mapping for GET /js/placeholders.min.js 
+2020:01:10 19:14:42.424 WARN  --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound : No mapping for GET /js/global_func.js 
+2020:01:10 19:14:42.430 WARN  --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound : No mapping for GET /js/jquery.bpopup.min.js 
+2020:01:10 19:15:32.983 INFO  --- [main] com.clbee.pbcms.PbcmsApplication : Starting PbcmsApplication on IRON with PID 44012 (D:\spring-works\bootpage\target\classes started by User in D:\spring-works\bootpage) 
+2020:01:10 19:15:32.985 INFO  --- [main] com.clbee.pbcms.PbcmsApplication : The following profiles are active: local,core 
+2020:01:10 19:15:33.935 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:01:10 19:15:33.940 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:01:10 19:15:33.941 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:01:10 19:15:33.941 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.29] 
+2020:01:10 19:15:34.453 INFO  --- [main] o.apache.jasper.servlet.TldScanner : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+2020:01:10 19:15:34.458 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:01:10 19:15:34.459 INFO  --- [main] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1418 ms 
+2020:01:10 19:15:34.593 INFO  --- [main] org.hibernate.Version : HHH000412: Hibernate Core {5.4.10.Final} 
+2020:01:10 19:15:35.366 INFO  --- [main] o.h.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.1.0.Final} 
+2020:01:10 19:15:35.426 WARN  --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator : HHH000342: Could not obtain connection to query metadata : null 
+2020:01:10 19:15:35.432 INFO  --- [main] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect 
+2020:01:10 19:15:35.997 INFO  --- [main] o.hibernate.tuple.PojoInstantiator : HHH000182: No default (no-argument) constructor for class: com.clbee.pbcms.vo.AppVO (class must be instantiated by Interceptor) 
+2020:01:10 19:15:36.311 WARN  --- [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2020:01:10 19:15:36.491 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/css/**'], [] 
+2020:01:10 19:15:36.492 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/js/**'], [] 
+2020:01:10 19:15:36.492 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/images/**'], [] 
+2020:01:10 19:15:36.492 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/font/**'], [] 
+2020:01:10 19:15:36.492 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/resources/**'], [] 
+2020:01:10 19:15:36.492 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/_upload/_temp/images/**'], [] 
+2020:01:10 19:15:36.512 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@566f4659, org.springframework.security.web.context.SecurityContextPersistenceFilter@25d9291a, org.springframework.security.web.header.HeaderWriterFilter@7b3085a3, org.springframework.security.web.csrf.CsrfFilter@1171ba7e, org.springframework.security.web.authentication.logout.LogoutFilter@4f581211, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5bd3ca3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d5574c7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23df7fad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1328f482, org.springframework.security.web.session.SessionManagementFilter@7b1c501d, org.springframework.security.web.access.ExceptionTranslationFilter@fe08eaf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4eb1943b] 
+2020:01:10 19:15:36.762 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:01:10 19:15:36.786 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:01:10 19:15:36.789 INFO  --- [main] com.clbee.pbcms.PbcmsApplication : Started PbcmsApplication in 4.153 seconds (JVM running for 6.977) 
+2020:01:10 19:15:41.133 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:01:10 19:15:41.133 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:01:10 19:15:41.139 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 6 ms 
+2020:01:10 19:15:41.345 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : ko 
+2020:01:10 19:15:41.347 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID = fab42275-abeb-4d13-8e61-022ccc92bf54 
+2020:01:10 19:15:41.347 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID to String = d13911f3-cead-40c7-bdda-a9f223775e1b 
+2020:01:10 19:15:41.348 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID to String to SubString= 77d9e6df35a34500b9a5cd774b767082 
+2020:01:10 19:15:41.348 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : my Addres is = 0:0:0:0:0:0:0:1 
+2020:01:10 19:15:41.348 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : userIpAQddress = 0:0:0:0:0:0:0:1 
+2020:01:10 19:15:41.348 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : bit ���� c = 17 
+2020:01:10 19:15:42.052 WARN  --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound : No mapping for GET /images/logo_login.png 
+2020:01:10 19:15:51.568 INFO  --- [http-nio-8080-exec-7] c.c.pbcms.controller.HomeController : ko 
+2020:01:10 19:15:51.569 INFO  --- [http-nio-8080-exec-7] c.c.pbcms.controller.HomeController : UUID RandomID = d3b8b180-dfdf-462d-8606-bb726a08bcc9 
+2020:01:10 19:15:51.569 INFO  --- [http-nio-8080-exec-7] c.c.pbcms.controller.HomeController : UUID RandomID to String = 9c0ebbf4-aa4d-4924-b747-063bca22efd6 
+2020:01:10 19:15:51.569 INFO  --- [http-nio-8080-exec-7] c.c.pbcms.controller.HomeController : UUID RandomID to String to SubString= 8667bf997a7e44df8a55307a4cb7ec35 
+2020:01:10 19:15:51.569 INFO  --- [http-nio-8080-exec-7] c.c.pbcms.controller.HomeController : my Addres is = 0:0:0:0:0:0:0:1 
+2020:01:10 19:15:51.569 INFO  --- [http-nio-8080-exec-7] c.c.pbcms.controller.HomeController : userIpAQddress = 0:0:0:0:0:0:0:1 
+2020:01:10 19:15:51.569 INFO  --- [http-nio-8080-exec-7] c.c.pbcms.controller.HomeController : bit ���� c = 17 
+2020:01:10 19:15:51.609 WARN  --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound : No mapping for GET /images/logo_login.png 
+2020:01:10 19:15:52.777 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : ko 
+2020:01:10 19:15:52.777 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID = 59edcebb-1841-402c-9d90-b0252b570895 
+2020:01:10 19:15:52.778 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID to String = 4898fab3-a42d-4f0a-87ac-7af15695f95d 
+2020:01:10 19:15:52.778 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID to String to SubString= 2d479cd77ec441a1bf016883c77a75a6 
+2020:01:10 19:15:52.778 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : my Addres is = 0:0:0:0:0:0:0:1 
+2020:01:10 19:15:52.778 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : userIpAQddress = 0:0:0:0:0:0:0:1 
+2020:01:10 19:15:52.778 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : bit ���� c = 17 
+2020:01:10 19:15:52.819 WARN  --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound : No mapping for GET /images/logo_login.png 
+2020:01:10 19:16:49.717 INFO  --- [main] com.clbee.pbcms.PbcmsApplication : Starting PbcmsApplication on IRON with PID 29872 (D:\spring-works\bootpage\target\classes started by User in D:\spring-works\bootpage) 
+2020:01:10 19:16:49.719 INFO  --- [main] com.clbee.pbcms.PbcmsApplication : The following profiles are active: local,core 
+2020:01:10 19:16:50.710 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http) 
+2020:01:10 19:16:50.716 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8080"] 
+2020:01:10 19:16:50.717 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2020:01:10 19:16:50.717 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.29] 
+2020:01:10 19:16:51.254 INFO  --- [main] o.apache.jasper.servlet.TldScanner : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+2020:01:10 19:16:51.260 INFO  --- [main] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2020:01:10 19:16:51.260 INFO  --- [main] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1477 ms 
+2020:01:10 19:16:51.424 INFO  --- [main] org.hibernate.Version : HHH000412: Hibernate Core {5.4.10.Final} 
+2020:01:10 19:16:52.312 INFO  --- [main] o.h.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.1.0.Final} 
+2020:01:10 19:16:52.373 WARN  --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator : HHH000342: Could not obtain connection to query metadata : null 
+2020:01:10 19:16:52.378 INFO  --- [main] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect 
+2020:01:10 19:16:52.960 INFO  --- [main] o.hibernate.tuple.PojoInstantiator : HHH000182: No default (no-argument) constructor for class: com.clbee.pbcms.vo.AppVO (class must be instantiated by Interceptor) 
+2020:01:10 19:16:53.231 WARN  --- [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning 
+2020:01:10 19:16:53.378 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/css/**'], [] 
+2020:01:10 19:16:53.378 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/js/**'], [] 
+2020:01:10 19:16:53.378 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/images/**'], [] 
+2020:01:10 19:16:53.378 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/font/**'], [] 
+2020:01:10 19:16:53.379 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/resources/**'], [] 
+2020:01:10 19:16:53.379 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: Ant [pattern='/_upload/_temp/images/**'], [] 
+2020:01:10 19:16:53.398 INFO  --- [main] o.s.s.w.DefaultSecurityFilterChain : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a01ffff, org.springframework.security.web.context.SecurityContextPersistenceFilter@4a105556, org.springframework.security.web.header.HeaderWriterFilter@e0847a9, org.springframework.security.web.csrf.CsrfFilter@1b444b5, org.springframework.security.web.authentication.logout.LogoutFilter@40a28bda, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@794d28a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42401b81, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35536760, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@a99c42c, org.springframework.security.web.session.SessionManagementFilter@92e2c93, org.springframework.security.web.access.ExceptionTranslationFilter@51813065, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@106459d9] 
+2020:01:10 19:16:53.636 INFO  --- [main] o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8080"] 
+2020:01:10 19:16:53.658 INFO  --- [main] o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path '' 
+2020:01:10 19:16:53.661 INFO  --- [main] com.clbee.pbcms.PbcmsApplication : Started PbcmsApplication in 4.305 seconds (JVM running for 7.093) 
+2020:01:10 19:16:56.077 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2020:01:10 19:16:56.078 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet' 
+2020:01:10 19:16:56.083 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 5 ms 
+2020:01:10 19:16:56.255 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : ko 
+2020:01:10 19:16:56.255 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID = ae25db92-0196-452e-b1c3-ddfddb8ed5b3 
+2020:01:10 19:16:56.255 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID to String = af2a4129-3159-46f7-b1de-a9a1455d0ae1 
+2020:01:10 19:16:56.255 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : UUID RandomID to String to SubString= 1d412eabf24a487ab3812bbf09176551 
+2020:01:10 19:16:56.255 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : my Addres is = 0:0:0:0:0:0:0:1 
+2020:01:10 19:16:56.256 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : userIpAQddress = 0:0:0:0:0:0:0:1 
+2020:01:10 19:16:56.256 INFO  --- [http-nio-8080-exec-1] c.c.pbcms.controller.HomeController : bit ���� c = 17 
+2020:01:10 19:16:59.857 INFO  --- [http-nio-8080-exec-5] c.c.pbcms.controller.HomeController : ko 
+2020:01:10 19:16:59.857 INFO  --- [http-nio-8080-exec-5] c.c.pbcms.controller.HomeController : UUID RandomID = d0238226-899a-4a48-9f77-412933a8c1c2 
+2020:01:10 19:16:59.857 INFO  --- [http-nio-8080-exec-5] c.c.pbcms.controller.HomeController : UUID RandomID to String = 93148e38-01a7-41b4-a9f4-78a456121df1 
+2020:01:10 19:16:59.857 INFO  --- [http-nio-8080-exec-5] c.c.pbcms.controller.HomeController : UUID RandomID to String to SubString= 141b4c0afd2c4f6a9f2938bddd60ce7b 
+2020:01:10 19:16:59.857 INFO  --- [http-nio-8080-exec-5] c.c.pbcms.controller.HomeController : my Addres is = 0:0:0:0:0:0:0:1 
+2020:01:10 19:16:59.857 INFO  --- [http-nio-8080-exec-5] c.c.pbcms.controller.HomeController : userIpAQddress = 0:0:0:0:0:0:0:1 
+2020:01:10 19:16:59.858 INFO  --- [http-nio-8080-exec-5] c.c.pbcms.controller.HomeController : bit ���� c = 17 
+2020:01:10 19:17:00.320 INFO  --- [http-nio-8080-exec-8] c.c.pbcms.controller.HomeController : ko 
+2020:01:10 19:17:00.320 INFO  --- [http-nio-8080-exec-8] c.c.pbcms.controller.HomeController : UUID RandomID = cfafd2b8-6651-43ae-9e7f-859d2bd2b896 
+2020:01:10 19:17:00.321 INFO  --- [http-nio-8080-exec-8] c.c.pbcms.controller.HomeController : UUID RandomID to String = 2167ba40-34c8-4d30-ae18-68d0c3f64420 
+2020:01:10 19:17:00.321 INFO  --- [http-nio-8080-exec-8] c.c.pbcms.controller.HomeController : UUID RandomID to String to SubString= 8804d6289c9e4047aac71312baaaea5e 
+2020:01:10 19:17:00.321 INFO  --- [http-nio-8080-exec-8] c.c.pbcms.controller.HomeController : my Addres is = 0:0:0:0:0:0:0:1 
+2020:01:10 19:17:00.321 INFO  --- [http-nio-8080-exec-8] c.c.pbcms.controller.HomeController : userIpAQddress = 0:0:0:0:0:0:0:1 
+2020:01:10 19:17:00.321 INFO  --- [http-nio-8080-exec-8] c.c.pbcms.controller.HomeController : bit ���� c = 17 
