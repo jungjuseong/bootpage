@@ -1,8 +1,8 @@
 <%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ include file="inc/top.jsp" %>
-<script type="text/javascript" src="js/jquery.bpopup.min.js"></script><!-- modal pop up -->
-<meta name="viewport" content="width=900">
+
+	<script type="text/javascript" src="/js/jquery.bpopup.min.js"></script><!-- modal pop up -->
+	<meta name="viewport" content="width=900">
 <script>
 	// 모달 팝업
     // Semicolon (;) to ensure closing of earlier scripting
@@ -66,27 +66,28 @@ $(document).ready(function(){
 });
 
 function userStatusValidate(userId, userPw){
+
 	$.ajax({
-		url:"/member/userStatusValid",
-		type:"POST",
-		data:{
+		url: "/member/userStatusValidation",
+		type: "post",
+		data: {
 			"userId":userId,
-			"passwd":userPw
+			"userPw":userPw
 		},
-		success:function(result){
+		success: function(result){
 			switch(result){
 				case 1 : 
-					//message : 탈퇴한 계쩡입니다.
+					//message : 탈퇴한 계정
 					alert("<spring:message code='page.index.009' />");
 					return;
 					break;
 				case 2 :
-					//message : 이용 정지된 계정입니다.
+					//message : 이용 정지된 계정
 					alert("<spring:message code='page.index.010' />");
 					return;
 					break;
 				case 3 : 
-					//message : 강제 탈퇴된 계정입니다.
+					//message : 강제 탈퇴된 계정
 					alert("<spring:message code='page.index.011' />");
 					return;
 					break;
@@ -95,21 +96,21 @@ function userStatusValidate(userId, userPw){
 					return;
 					break;
 				case 5 :
-					//message : 메일 인증후 사용 가능합니다.
+					//message : 메일 인증후 사용 가능
 					alert("<spring:message code='page.index.012' />");
 					return;
 					break;
 				case 6 :
-					//message : 아이디 또는 비밀번호를 다시 확인하세요.
+					//message : 아이디 또는 비밀번호를 다시 확인
 					alert("<spring:message code='page.index.013' />");
 					return;
 					break;
-					//message : 유효기간이 지난 계정입니다.
+					//message : 유효기간이 지난 계정
 				case 7:
 					alert("<spring:message code='page.index.016' />");
 					break;
 				case 8:
-					//message : 이미 로그인 되어있는 상태입니다.
+					//message : 이미 로그인 상태
 					alert("<spring:message code='login.duplicate.device' />");
 					break;
 			}
@@ -240,23 +241,21 @@ function moveToDownList(){
 	</div>
 	<!-- //modal pop up : 아이디/비밀번호 찾기 -->
 
-
-
 <!-- wrap -->
 <div id="login_wrap">
 	
-	<!-- conteiner -->
+	<!-- container -->
 	<div id="container">
 		<div class="login_area">
 			<div>
 				<h1><img src="images/logo_login.png" alt="PageBuilder"></h1>
 				<!-- section -->
-				<form action="j_spring_security_check" method="post" name="log_f" id="log_f">
+				<form action="/auth/login" method="post" name="log_f" id="log_f">
 					<div class="section first_section">
 						<div class="form_area">
-							<input name="j_username" id="usernameText" type="text" style="" >
-							<input name="j_password" id="passwordText" type="password" style="" >
-							<a href="#" id="loginBtn" name="logiBtn" class="btn btn_login" >LOGIN</a>
+							<input name="username" id="usernameText" type="text" required autofocus>
+							<input name="password" id="passwordText" type="password" >
+							<button type="submit" id="loginBtn" name="logiBtn" class="btn btn_login" >LOGIN</button>
 						</div>
 						<div class="member_area">
 							<ul>

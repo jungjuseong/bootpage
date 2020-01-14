@@ -19,10 +19,7 @@ import java.util.Map;
 public class MySpecialAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
 
     @Override
-    public void onAuthenticationSuccess(HttpServletRequest request,
-                                        HttpServletResponse response, Authentication arg2) throws IOException,
-            ServletException {
-        // TODO Auto-generated method stub
+    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication arg2) throws IOException {
         Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>)SecurityContextHolder.getContext().getAuthentication().getAuthorities();
         UserPrincipal activeUser = (UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
@@ -40,7 +37,6 @@ public class MySpecialAuthenticationSuccessHandler implements AuthenticationSucc
         String userAgent = map.get("user-agent");
 
         if(userAgent.contains("Android")){
-
             response.sendRedirect("/down/list.html?currentPage=1&isMobile=ADD");
             return;
         }

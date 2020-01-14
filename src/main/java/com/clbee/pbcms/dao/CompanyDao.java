@@ -3,6 +3,7 @@ package com.clbee.pbcms.dao;
 import java.math.BigInteger;
 import java.util.List;
 
+import com.clbee.pbcms.util.MyPasswordEncoder;
 import lombok.AllArgsConstructor;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
@@ -12,12 +13,8 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.LogicalExpression;
 import org.hibernate.criterion.Restrictions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.clbee.pbcms.util.ShaPassword;
-import com.clbee.pbcms.util.GetRenewPassword;
-import com.clbee.pbcms.vo.AppVO;
 import com.clbee.pbcms.vo.CompanyVO;
 import com.clbee.pbcms.vo.MemberVO;
 
@@ -151,8 +148,6 @@ public class CompanyDao {
 
         try {
             tx = session.beginTransaction();
-            ShaPassword shaPassword = new ShaPassword();
-            GetRenewPassword getRenewPassword = new GetRenewPassword();
 
             Criteria criteria= session.createCriteria(MemberVO.class);
             Criterion eqMyId = Restrictions.eq("user_id", myId);
@@ -165,8 +160,8 @@ public class CompanyDao {
                 result="noMatch";
             }else{
                 MemberVO memberVO = (MemberVO)criteria.uniqueResult();
-                String newPw=getRenewPassword.getRenewPassword();
-                memberVO.setUserPw(shaPassword.changeSHA256(newPw));
+                String newPw = MyPasswordEncoder.getRenewPassword();
+                memberVO.setUserPw(MyPasswordEncoder.changeSHA256(newPw));
                 session.saveOrUpdate(memberVO);
 
                 result=newPw;
@@ -253,9 +248,7 @@ public class CompanyDao {
 
         try {
             tx = session.beginTransaction();
-            ShaPassword shaPassword = new ShaPassword();
-
-            String chPw=shaPassword.changeSHA256(inputPW);
+            String chPw = MyPasswordEncoder.changeSHA256(inputPW);
 
             //		m.setUser_pw_1(chPw);
             //		m.setUser_id(userID);

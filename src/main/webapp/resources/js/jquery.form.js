@@ -15,7 +15,7 @@
     "use strict";
     if (typeof define === 'function' && define.amd) {
         // using AMD; register as anon module
-        define(['jquery'], factory);
+        define(['src/main/webapp/WEB-INF/js/jquery'], factory);
     } else {
         // no AMD; invoke directly
         factory( (typeof(jQuery) != 'undefined') ? jQuery : window.Zepto );

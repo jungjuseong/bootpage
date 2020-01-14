@@ -3,11 +3,8 @@ package com.clbee.pbcms.util;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import org.springframework.stereotype.Repository;
-
-@Repository
-public class ShaPassword {
-    public String changeSHA256(String str){
+public class MyPasswordEncoder {
+    public static String changeSHA256(String str){
         String SHA = "";
         try{
             MessageDigest sh = MessageDigest.getInstance("SHA-256");
@@ -24,5 +21,20 @@ public class ShaPassword {
             SHA = null;
         }
         return SHA;
+    }
+
+    static public String getRenewPassword(){
+        String password="";
+        for(int i= 0; i<8; i++){
+            if(i%2 == 0){
+                int rnum = (int)(Math.random() * 10);
+                password += rnum;
+            }else{
+                char lowerStr = (char)(Math.random() * 26 + 97);
+                password += lowerStr;
+            }
+        }
+
+        return password;
     }
 }

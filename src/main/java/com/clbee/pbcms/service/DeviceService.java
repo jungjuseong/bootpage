@@ -14,23 +14,18 @@ public class DeviceService {
     private DeviceDao deviceDao;
 
     public int insertDeviceInfo(DeviceVO deviceVO) {
-        // TODO Auto-generated method stub
         return deviceDao.insertDeviceInfo(deviceVO);
     }
 
     public int updateDeviceInfo(DeviceVO deviceVO) {
-        // TODO Auto-generated method stub
         return deviceDao.updateDeviceInfo(deviceVO);
     }
 
     public DeviceVO selectDeviceInfo(int deviceSeq) {
-        // TODO Auto-generated method stub
         return deviceDao.selectDeviceInfo(deviceSeq);
     }
 
     public DeviceList selectDeviceList(int currentPage, int companySeq, String searchType, String searchValue) {
-        // TODO Auto-generated method stub
-
 
         DeviceList list = null;
         // 전체 페이지 1,2,3,4,5,6,7,8,9,19밑에 파라미터 숫자가 표시될 갯수
@@ -63,12 +58,10 @@ public class DeviceService {
     }
 
     public int checkIfExistUUID(String deviceUuid, int companySeq) {
-        // TODO Auto-generated method stub
         return deviceDao.checkIfExistUUID(deviceUuid, companySeq);
     }
 
     public int countDeviceIsAvailable(int companySeq) {
-        // TODO Auto-generated method stub
         return deviceDao.countDeviceIsAvailable(companySeq);
     }
 }

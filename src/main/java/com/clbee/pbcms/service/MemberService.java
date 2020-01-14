@@ -3,27 +3,32 @@ package com.clbee.pbcms.service;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 
 import com.clbee.pbcms.dao.MemberDao;
-import com.clbee.pbcms.domain.Role;
 import com.clbee.pbcms.dto.MemberDto;
 import com.clbee.pbcms.security.PasswordEncoder;
+
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import lombok.AllArgsConstructor;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import com.clbee.pbcms.vo.MemberList;
-import com.clbee.pbcms.vo.MemberVO;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.clbee.pbcms.vo.MemberList;
+import com.clbee.pbcms.vo.MemberVO;
+
 @Service
+@Slf4j
 @AllArgsConstructor
-public class MemberService implements UserDetailsService {
+public class MemberService {
+
+    private Logger logger; // = LoggerFactory.getLogger(MemberService.class);
 
     private MemberDao memberDao;
 
@@ -32,21 +37,6 @@ public class MemberService implements UserDetailsService {
         // 비밀번호 암호화
         memberDto.setUserPw(PasswordEncoder.changeSHA256(memberDto.getUserPw()));
         addMember(memberDto.toEntity());
-    }
-
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        MemberVO member = findByUserName(username);
-
-        List<GrantedAuthority> authorities = new ArrayList<>();
-
-        if (member.getUserStatus() == "4") {
-            authorities.add(new SimpleGrantedAuthority(Role.ADMIN_SERVICE.getValue()));
-        } else {
-            authorities.add(new SimpleGrantedAuthority(Role.COMPANY_USER.getValue()));
-        }
-
-        return new User(member.getUserId(), member.getUserPw(), authorities);
     }
 
     public void addMember(MemberVO member) {
@@ -58,6 +48,9 @@ public class MemberService implements UserDetailsService {
     }
 
     public int logInVerify(String username, String password){
+
+        logger.info("login username: " + username + "," + password);
+
         List<MemberVO> appList = memberDao.logInVerify(username, password);
 
         Iterator iter = appList.iterator();
@@ -145,6 +138,9 @@ public class MemberService implements UserDetailsService {
     }
 
     public MemberVO findByUserName(String username){
+        logger.info("username: " + username);
+        System.out.println("username: " + username);
+
         return memberDao.findByUserName(username);
     }
 

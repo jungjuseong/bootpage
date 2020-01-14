@@ -8,22 +8,22 @@
 <%-- <%@ taglib prefix="form"uri="http://www.springframework.org/tags/form" %> --%>
 
 <!doctype html>
-<html lang="ko">
-<head>
-<title>PageBuilder CMS</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7" />
-<meta name="format-detection" content="telephone=no">
-<meta name="viewport" content="width=device-width, user-scalable=yes, target-densitydpi=device-dpi">
-<link rel="stylesheet" type="text/css" href="/css/common.css" />
-<link rel="stylesheet" type="text/css" href="/css/contents.css" />
-<link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.10.3.css">
-<!--[if lt IE 10]>
-<link rel="stylesheet" type="text/css" href="/css/ie9.css" />
-<![endif]-->
+    <html lang="ko">
+    <head>
+        <title>PageBuilder CMS</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, user-scalable=yes, target-densitydpi=device-dpi">
+        <link rel="stylesheet" type="text/css" href="/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="/css/contents.css" />
+        <link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.10.3.css">
+        <!--[if lt IE 10]>
+        <link rel="stylesheet" type="text/css" href="/css/ie9.css" />
+        <![endif]-->
 
-<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="/js/jquery-ui-1.10.3.min.js"></script>
-<script type="text/javascript" src="/js/custom-form-elements.min.js"></script><!-- radio & checkbox -->
-<script type="text/javascript" src="/js/placeholders.min.js"></script><!-- placeholder -->
-<script type="text/javascript" src="/js/global_func.js"></script>
+        <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-ui-1.10.3.min.js"></script>
+        <script type="text/javascript" src="/js/custom-form-elements.min.js"></script><!-- radio & checkbox -->
+        <script type="text/javascript" src="/js/placeholders.min.js"></script><!-- placeholder -->
+        <script type="text/javascript" src="/js/global_func.js"></script>

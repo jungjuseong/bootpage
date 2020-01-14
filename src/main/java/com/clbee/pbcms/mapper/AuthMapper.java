@@ -1,9 +1,8 @@
 package com.clbee.pbcms.mapper;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface PersonMapper {
-    List selectPersonList();
+public interface AuthMapper {
+    String selectFirstUrl(int groupSeq);
 }

@@ -5,14 +5,11 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.UUID;
 
-import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.clbee.pbcms.Json.ConnectLicenseInfo;
 import com.clbee.pbcms.dao.LicenseDao;
 import com.clbee.pbcms.util.Entity;
-import com.clbee.pbcms.util.ShaPassword;
 import com.clbee.pbcms.vo.LicenseList;
 import com.clbee.pbcms.vo.LicenseSubList;
 import com.clbee.pbcms.vo.LicenseSubVO;
@@ -21,9 +18,7 @@ import com.clbee.pbcms.vo.MemberVO;
 
 @Service
 public class LicenseService {
-
     final LicenseDao licenseDao;
-    final ShaPassword shaPassword;
 
     int pageSize = 10;
     int maxResult = 10;
@@ -33,9 +28,8 @@ public class LicenseService {
     int pageSize_device = 5;
     int maxResult_device = 5;
 
-    public LicenseService(LicenseDao licenseDao, ShaPassword shaPassword) {
+    public LicenseService(LicenseDao licenseDao) {
         this.licenseDao = licenseDao;
-        this.shaPassword = shaPassword;
     }
 
     public int checkUseLicense(int userSeq) {

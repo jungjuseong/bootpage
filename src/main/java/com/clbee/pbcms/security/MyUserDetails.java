@@ -1,4 +1,4 @@
-package com.clbee.pbcms.util;
+package com.clbee.pbcms.security;
 
 import java.util.Collection;
 
@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.clbee.pbcms.vo.MemberVO;
 
 @Data
-public class myUserDetails implements UserDetails {
+public class MyUserDetails implements UserDetails {
 
     private static final long serialVersionUID = -7306690067344994732L;
     private String username;
@@ -19,7 +19,7 @@ public class myUserDetails implements UserDetails {
     private boolean isEnabled;
     private boolean isBook;
 
-    public myUserDetails(String username, String password,
+    public MyUserDetails(String username, String password,
                          Collection<? extends GrantedAuthority> authorities,
                          MemberVO memberVO, boolean isEnabled, boolean isBook) {
         super();

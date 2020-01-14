@@ -1,6 +1,6 @@
 package com.clbee.pbcms.dao;
 
-import com.clbee.pbcms.util.ShaPassword;
+import com.clbee.pbcms.util.MyPasswordEncoder;
 import com.clbee.pbcms.vo.MemberVO;
 import lombok.AllArgsConstructor;
 import org.apache.ibatis.session.SqlSession;
@@ -9,7 +9,6 @@ import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.LogicalExpression;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.security.MessageDigest;
@@ -209,7 +208,7 @@ public class MemberDao {
 
 		Session session = sessionFactory.openSession();
 		Transaction tx = null;
-		MemberVO memberVO = null;
+		MemberVO member = null;
 
 		try {
 			tx = session.beginTransaction();
@@ -218,17 +217,17 @@ public class MemberDao {
 			Criterion user = Restrictions.eq("userId", username);
 	
 			cr.add(user);
-			memberVO = (MemberVO) cr.uniqueResult();
+			member = (MemberVO) cr.uniqueResult();
 	
 			tx.commit();
-		}catch (Exception e) {
+		} catch (Exception e) {
 			if(tx != null) tx.rollback();
 			e.printStackTrace();	
-		}finally {
+		} finally {
 			session.close();
 		}
 
-		return memberVO;
+		return member;
 	}
 	
 	
@@ -392,9 +391,8 @@ public class MemberDao {
 		
 		try {
 			tx = session.beginTransaction();
-			ShaPassword shaPassword = new ShaPassword();
-			
-			memberVO.setUserPw(shaPassword.changeSHA256(memberVO.getUserPw()));
+
+			memberVO.setUserPw(MyPasswordEncoder.changeSHA256(memberVO.getUserPw()));
 			
 			String hql = "UPDATE MemberVO set "
 					+ "user_Pw = :user_Pw"

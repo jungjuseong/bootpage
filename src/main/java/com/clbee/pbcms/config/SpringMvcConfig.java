@@ -31,10 +31,10 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-        registry.addResourceHandler("/css/**").addResourceLocations("/resources/webapp/css/");
-        registry.addResourceHandler("/js/**").addResourceLocations("/resources/webapp/js/");
-        registry.addResourceHandler("/images/**").addResourceLocations("/resources/webapp/images/");
-        registry.addResourceHandler("/font/**").addResourceLocations("/resources/webapp/font/");
+        registry.addResourceHandler("/css/**").addResourceLocations("/resources/css/");
+        registry.addResourceHandler("/js/**").addResourceLocations("/resources/js/");
+        registry.addResourceHandler("/images/**").addResourceLocations("/resources/images/");
+        registry.addResourceHandler("/font/**").addResourceLocations("/resources/font/");
     }
     @Bean
     public ViewResolver getViewResolver() {
@@ -44,31 +44,27 @@ public class SpringMvcConfig implements WebMvcConfigurer {
         return resolver;
     }
 
-    @Bean
-    public RequestMappingHandlerAdapter noname() {
-        RequestMappingHandlerAdapter requestMappingHandlerAdapter = new RequestMappingHandlerAdapter();
-
-        List converters = new ArrayList();
-        converters.add(new MappingJackson2HttpMessageConverter());
-        converters.add(new ByteArrayHttpMessageConverter());
-        converters.add(new SourceHttpMessageConverter());
-        converters.add(new FormHttpMessageConverter());
-        converters.add(new StringHttpMessageConverter());
-
-        requestMappingHandlerAdapter.setMessageConverters(converters);
-        return requestMappingHandlerAdapter;
-    }
+//    @Bean
+//    public RequestMappingHandlerAdapter noname() {
+//        RequestMappingHandlerAdapter requestMappingHandlerAdapter = new RequestMappingHandlerAdapter();
+//
+//        List converters = new ArrayList();
+//        converters.add(new MappingJackson2HttpMessageConverter());
+//        converters.add(new ByteArrayHttpMessageConverter());
+//        converters.add(new SourceHttpMessageConverter());
+//        converters.add(new FormHttpMessageConverter());
+//        converters.add(new StringHttpMessageConverter());
+//
+//        requestMappingHandlerAdapter.setMessageConverters(converters);
+//        return requestMappingHandlerAdapter;
+//    }
 
     @Bean
     public ReloadableResourceBundleMessageSource messageSource() {
         ReloadableResourceBundleMessageSource source = new ReloadableResourceBundleMessageSource();
-        // 메세지 프로퍼티파일의 위치와 이름을 지정한다.
         source.setBasename("classpath:/messages/messages");
-        // 기본 인코딩을 지정한다.
         source.setDefaultEncoding("UTF-8");
-        // 프로퍼티 파일의 변경을 감지할 시간 간격을 지정한다.
         source.setCacheSeconds(60);
-        // 없는 메세지일 경우 예외를 발생시키는 대신 코드를 기본 메세지로 한다.
         source.setUseCodeAsDefaultMessage(true);
         return source;
     }

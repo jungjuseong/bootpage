@@ -303,7 +303,7 @@ input[type=radio]#c2+label{ margin-right:3px;}
 .date{ cursor:pointer; background:#fff url(/images/icon_calendar.png) no-repeat 88px center !important; width:100px;}
 
 /*20180213 - lsy : userlist modify */
-.btnXXS{ height:24px; line-height:24px; padding:0 8px; color:#333; font-size:13px; border-radius:3px; border:1px solid #eeeeee; background:url(/images/bg_btn_s.png) repeat-x;}
+.btnXXS{ height:24px; line-height:24px; padding:0 8px; color:#333; font-size:13px; border-radius:3px; border:1px solid #eeeeee; background:url(/src/main/webapp/images/bg_btn_s.png) repeat-x;}
 
 /* button area */
 .btn_area_bottom{ margin-top:50px; text-align:center;}
